@@ -35,7 +35,7 @@ jobs:
   publish:
     name: Publish
     needs: release
-    if: needs.release.releases_created == true
+    if: needs.release.releases_created == "true"
     runs-on: ubuntu-latest
     steps:
       - run: |
