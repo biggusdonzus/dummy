@@ -23,7 +23,6 @@ jobs:
         id: release
         uses: googleapis/release-please-action@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
       - name: Debug release-please output
         env:
