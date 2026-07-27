@@ -15,12 +15,17 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     outputs:
-      release_please: ${{ steps.release.outputs }}
+      releases_created: ${{ steps.release.outputs.releases_created }}
     steps:
-      - id: release
+      - name: Release please
+        id: release
         uses: googleapis/release-please-action@v5
         with:
           release-type: simple
+      - name: Debug release-please output
+        run: |
+          echo "Debug: print release-please output"
+          echo "${{ toJson(steps.release.outputs) }}"
 
   publish:
     name: Publish
