@@ -39,18 +39,18 @@ jobs:
     steps:
       - run: |
           echo "Debug:"
-          echo "Release created: ${{ needs.release.releases_created }}"
-          echo "Tag name: ${{ needs.release.tag_name }}"
-          echo "Version: ${{ needs.release.version }}"
+          echo "Release created: ${{ needs.release.outputs.releases_created }}"
+          echo "Tag name: ${{ needs.release.outputs.tag_name }}"
+          echo "Version: ${{ needs.release.outputs.version }}"
 
   publish:
     name: Publish
     needs: release
-    if: needs.release.releases_created
+    if: needs.release.outputs.releases_created
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "Print release please output"
           echo "Publish:"
-          echo "Tag name: ${{ needs.release.tag_name }}"
-          echo "Version: ${{ needs.release.version }}"
+          echo "Tag name: ${{ needs.release.outputs.tag_name }}"
+          echo "Version: ${{ needs.release.outputs.version }}"
