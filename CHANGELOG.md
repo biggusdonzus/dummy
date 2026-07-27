@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/biggusdonzus/dummy/compare/v1.1.0...v1.2.0) (2026-07-27)
+
+
+### Features
+
+* update publish job ([237d20e](https://github.com/biggusdonzus/dummy/commit/237d20e1edd188d3a14f4c285c596ee10417d5b2))
+
 ## [1.1.0](https://github.com/biggusdonzus/dummy/compare/v1.0.3...v1.1.0) (2026-07-27)
 
 
