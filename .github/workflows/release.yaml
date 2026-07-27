@@ -30,8 +30,9 @@ jobs:
   publish:
     name: Publish
     needs: release
+    if: needs.release.releases_created == true
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "Print release please output"
-          echo "${{ toJson(needs.release.outputs.release_please) }}"
+          echo "Do something"
