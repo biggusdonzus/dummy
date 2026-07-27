@@ -32,10 +32,21 @@ jobs:
           echo "Debug: print release-please output"
           echo "$RELEASE_PLEASE_OUTPUTS"
 
+  debug:
+    name: Debug
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Debug:"
+          echo "Release created: ${{ needs.release.releases_created }}"
+          echo "Tag name: ${{ needs.release.tag_name }}"
+          echo "Version: ${{ needs.release.version }}"
+
   publish:
     name: Publish
     needs: release
-    if: needs.release.releases_created == 'true'
+    if: needs.release.releases_created
     runs-on: ubuntu-latest
     steps:
       - run: |
