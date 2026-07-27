@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/biggusdonzus/dummy/compare/v1.0.0...v1.0.1) (2026-07-27)
+
+
+### Bug Fixes
+
+* ci publish condition ([93b902f](https://github.com/biggusdonzus/dummy/commit/93b902f220eebe480c06b7ea999a9b68ec133be6))
+* ci publish condition again ([9906fcf](https://github.com/biggusdonzus/dummy/commit/9906fcf94978553b0e75b09766b596f14ad853a6))
+
 ## 1.0.0 (2026-07-27)
 
 
