@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/biggusdonzus/dummy/compare/v1.0.3...v1.1.0) (2026-07-27)
+
+
+### Features
+
+* release please use default token without specify ([fff5451](https://github.com/biggusdonzus/dummy/commit/fff5451549593ce983756eb0d1e5bda21447437a))
+
 ## [1.0.3](https://github.com/biggusdonzus/dummy/compare/v1.0.2...v1.0.3) (2026-07-27)
 
 
