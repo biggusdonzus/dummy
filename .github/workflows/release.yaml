@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    outputs:
+      release_please: ${{ steps.release.outputs }}
+    steps:
+      - id: release
+        uses: googleapis/release-please-action@v5
+        with:
+          release-type: simple
+
+  publish:
+    name: Publish
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Print release please output"
+          echo "${{ toJson(needs.release.outputs.release_please) }}"
