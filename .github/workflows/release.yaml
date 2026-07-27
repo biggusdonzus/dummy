@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      version: ${{ steps.release.outputs.version }}
     steps:
       - name: Release please
         id: release
@@ -35,4 +37,6 @@ jobs:
     steps:
       - run: |
           echo "Print release please output"
-          echo "Do something"
+          echo "Publish:"
+          echo "Tag name: ${{ needs.release.tag_name }}"
+          echo "Version: ${{ needs.release.version }}"
