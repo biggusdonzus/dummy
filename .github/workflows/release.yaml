@@ -26,9 +26,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
       - name: Debug release-please output
+        env:
+          RELEASE_PLEASE_OUTPUTS: ${{ toJson(steps.release.outputs) }}
         run: |
           echo "Debug: print release-please output"
-          echo "${{ toJson(steps.release.outputs) }}"
+          echo "$RELEASE_PLEASE_OUTPUTS"
 
   publish:
     name: Publish
