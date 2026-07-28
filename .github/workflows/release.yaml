@@ -45,7 +45,7 @@ jobs:
   publish:
     name: Publish
     needs: release
-    if: needs.release.outputs.releases_created
+    if: needs.release.outputs.releases_created == "true"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout release ${{ needs.release.outputs.tag_name }}
