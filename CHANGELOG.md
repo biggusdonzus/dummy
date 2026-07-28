@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/biggusdonzus/dummy/compare/v1.2.0...v1.3.0) (2026-07-28)
+
+
+### Features
+
+* update hello.sh ([718ce1c](https://github.com/biggusdonzus/dummy/commit/718ce1c6f6313e00c45275c373b6fcb407a09711))
+
 ## [1.2.0](https://github.com/biggusdonzus/dummy/compare/v1.1.0...v1.2.0) (2026-07-27)
 
 
